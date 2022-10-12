@@ -1,11 +1,15 @@
-﻿namespace BulkyBook.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BulkyBook.Models
 {
     public class Kategori
     {
+        [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public int displayorder { get; set; }
-        public DateTime CreationTime { get; set; }= DateTime.Now;
+        [Required] 
+        public string? Name { get; set; }
+        public int DisplayOrder { get; set; }
+        public DateTime CreatedDateTime { get; set; }= DateTime.Now;
 
     }
 }
